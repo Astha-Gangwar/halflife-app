@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local sqlite data
+*.db
+*.sqlite
+*.sqlite3
+
+# Env / secrets
+.env
+.env.*
+# The frontend's Firebase Web config is not a secret (see frontend/.env.example)
+# and Vite needs it present at image-build time to bake into the static
+# bundle -- everything else under .env* stays excluded.
+!frontend/.env.production
+*.json
+!package.json
+!package-lock.json
+!tsconfig*.json
+!firebase.json
+!firestore.indexes.json
+!.firebaserc
+
+# Frontend: source (src/, package.json, etc.) passes through — Stage 1 of
+# the Dockerfile builds it fresh inside the image. node_modules/ and dist/
+# are excluded here on purpose: a local dist/ could be stale, and a local
+# node_modules/ may be built for the wrong OS/architecture for the
+# container — both get rebuilt properly from scratch during the image build.
+frontend/node_modules/
+frontend/dist/
+
+# VCS / editor / OS
+.git/
+.gitignore
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Tests
+tests/
+conftest.py
+.coverage
+htmlcov/
+
+# Docs
+*.md

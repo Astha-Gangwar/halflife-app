@@ -1,0 +1,14 @@
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+*.db
+dist/
+.env
+.env.production
+.pytest_cache/
+
+# Hackathon submission planning material (BRD docs, generated diagrams/docx) --
+# not part of the application itself.
+Docs/
+docs_output/

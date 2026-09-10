@@ -1,0 +1,11 @@
+python-dotenv>=1.0.0
+fastapi>=0.110.0
+uvicorn>=0.29.0
+pydantic>=2.7.0
+pytest>=8.1.0
+requests>=2.31.0
+pyjwt>=2.8.0
+google-adk
+google-cloud-firestore>=2.16.0
+firebase-admin>=6.5.0  # verifies real users' Firebase ID tokens (email/password auth)
+mock-firestore>=0.11.0  # test-only: in-memory fake used by the test suite instead of real GCP
